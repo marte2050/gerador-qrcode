@@ -12,6 +12,14 @@ buttonEvent.addEventListener("click", () => {
     loadingImage(value);
 })
 
+// Caso pressionado enter é chamado o método loading.
+inputData.addEventListener('keydown', (event)=>{
+    if(event.key === 'Enter'){
+        const value = getInput();
+        loadingImage(value);
+    }
+})
+
 // Obtém os valores do input
 function getInput(){
     const value = inputData.value;
